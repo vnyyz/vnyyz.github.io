@@ -7,11 +7,13 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #161616; 
-    color: #f4f4f4; 
+    background-color: #161616;
+    color: #f4f4f4;
     display: flex;
-    flex-direction: column; /* alterado para permitir scroll */
-    justify-content: flex-start; /* alinha ao topo */
+    flex-direction: column;
+    /* alterado para permitir scroll */
+    justify-content: flex-start;
+    /* alinha ao topo */
     align-items: center;
     min-height: 100vh;
     padding: 2rem;
@@ -19,18 +21,22 @@ body {
 
 .container {
     display: flex;
-    flex-wrap: wrap; /* faz as colunas quebrarem em telas menores */
+    flex-wrap: wrap;
+    /* faz as colunas quebrarem em telas menores */
     justify-content: space-between;
     align-items: center;
     max-width: 1100px;
     width: 100%;
-    gap: 3em; /*espaco nas colunas - sua alteração mantida*/
+    gap: 3em;
+    /*espaco nas colunas - */
 }
 
 /* coluna da esquerda (dostexto e links) */
 .coluna-esquerda {
-    flex: 1; /* ocupa metade do espaço */
-    min-width: 300px; /* lrgura minima antes de quebrar */
+    flex: 1;
+    /* ocupa metade do espaço */
+    min-width: 300px;
+    /* lrgura minima antes de quebrar */
 }
 
 .coluna-esquerda h1 {
@@ -51,18 +57,21 @@ body {
 
 .links-sociais a {
     color: #f4f4f4;
-    font-size: 2.5rem; /* tamanho dos icones */
+    font-size: 2.5rem;
+    /* tamanho dos icones */
     margin-right: 20px;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .links-sociais a:hover {
-    color: #8b0097; /*corzinha quando vc passa o mouse em cima*/
+    color: #8b0097;
+    /*corzinha quando vc passa o mouse em cima*/
 }
 
 .btn-cv {
-    background-color: #8b0097; /* azul do botão */
+    background-color: #8b0097;
+    /* azul do botão */
     color: white;
     padding: 12px 25px;
     text-decoration: none;
@@ -74,34 +83,39 @@ body {
 .btn-cv:hover {
     background-color: #d70b82;
 }
+
 /*imagem minha*/
 .coluna-direita {
-    flex: 1; 
+    flex: 1;
     min-width: 300px;
-    text-align: center; 
+    text-align: center;
 }
 
 .coluna-direita h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
 }
+
 .coluna-direita img {
     max-width: 100%;
-    width: 954px; 
-    height: 350px; 
+    width: 954px;
+    height: 350px;
     object-fit: cover;
-    object-position: center; 
+    object-position: center;
     border-radius: 10px;
 }
 
 
 /*sessao dos projetos*/
 .projetos {
-    max-width: 1100px; /* msm largura do container principal*/ 
+    max-width: 1100px;
+    /* msm largura do container principal*/
     width: 100%;
-    margin: 4rem auto 2rem; /* espaco em cima e embaixo */
+    margin: 4rem auto 2rem;
+    /* espaco em cima e embaixo */
     text-align: center;
-    padding: 0 2rem; /* faz que não cole nas bordas em telas pequenas */
+    padding: 0 2rem;
+    /* faz que não cole nas bordas em telas pequenas */
 }
 
 .projetos h2 {
@@ -113,40 +127,45 @@ body {
 /*css flexbox:fogo::fogo: */
 .projetos-container {
     display: flex;
-    flex-wrap: wrap; /*faz ser responsivo */
-    justify-content: center; 
-    gap: 1.5rem; 
+    flex-wrap: wrap;
+    /*faz ser responsivo */
+    justify-content: center;
+    gap: 1.5rem;
 }
 
 
 .projeto-card {
     background-color: #3a3337;
     border-radius: 8px;
-    width: 320px; /* largura dos cards*/
+    width: 320px;
+    /* largura dos cards*/
     text-align: left;
     transition: transform 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.603);
 }
 
 .projeto-card:hover {
-    transform: translateY(-5px); /* efeitinho legal ao passar o mouse */
+    transform: translateY(-5px);
+    /* efeitinho legal ao passar o mouse */
 }
 
 .projeto-card img {
-    width: 100%; 
-    height: 180px; 
+    width: 100%;
+    height: 180px;
 }
 
 .projeto-card h3 {
     font-size: 1.5rem;
-    margin: 1rem 1.5rem 0.5rem; 
-    color: #8b0097; /* cor de destaque */
+    margin: 1rem 1.5rem 0.5rem;
+    color: #8b0097;
+    /* cor de destaque */
 }
 
 .projeto-card p {
     font-size: 0.95rem;
     line-height: 1.5;
-    margin: 0 1.5rem 1rem; /* espaco interno*/
+    margin: 0 1.5rem 1rem;
+    /* espaco interno*/
 }
 
 .projeto-card a {
@@ -154,7 +173,8 @@ body {
     background-color: transparent;
     color: #f4f4f4;
     padding: 8px 15px;
-    margin: 0 1.5rem 1.5rem; /* espaco interno */
+    margin: 0 1.5rem 1.5rem;
+    /* espaco interno */
     text-decoration: none;
     font-weight: bold;
     border: 1px solid #8b0097;
@@ -163,9 +183,10 @@ body {
 }
 
 .projeto-card a:hover {
-    background-color: #d70b82; /*corzinha q fica qando vc passa o mouse em cima*/
+    background-color: #d70b82;
+    /*corzinha q fica qando vc passa o mouse em cima*/
     color: white;
-} 
+}
 
 /* ---------------------------------- */
 /* para telas pequenas (celular) */
@@ -173,16 +194,19 @@ body {
 
 /* isso aqui só vai funcionar em telas de 768px pra baixo (tipo celular) */
 @media (max-width: 768px) {
-    
+
     body {
-        padding: 1.5rem; /* menos espaço nas bordas da tela */
-        display: block; /* ajeita o body pra página poder rolar normal */
+        padding: 1.5rem;
+        /* menos espaço nas bordas da tela */
+        display: block;
+        /* ajeita o body pra página poder rolar normal */
     }
 
     /* joga a coluna da direita pra baixo da coluna da esquerda */
     .container {
         flex-direction: column;
-        gap: 1.5em; /* diminui o espaço entre elas */
+        gap: 1.5em;
+        /* diminui o espaço entre elas */
     }
 
     /* deixa o texto da esquerda no meio */
@@ -193,23 +217,26 @@ body {
     /* deixa os ícones (github, etc) no meio */
     .links-sociais {
         text-align: center;
-        margin-bottom: 2.5rem; 
+        margin-bottom: 2.5rem;
     }
 
     .links-sociais a {
-        margin: 0 10px; /* um espacinho entre os ícones */
+        margin: 0 10px;
+        /* um espacinho entre os ícones */
     }
 
     .coluna-direita img {
-        width: 100%; 
-        max-width: 400px; /*faz a imagem nao ficarenorme*/
-        height: auto; 
+        width: 100%;
+        max-width: 400px;
+        /*faz a imagem nao ficarenorme*/
+        height: auto;
     }
 
     /* os cards de projeto também vão ficar um em cima do outro */
     .projeto-card {
         width: 100%;
-        max-width: 350px; /* um limite de largura pra eles */
+        max-width: 350px;
+        /* um limite de largura pra eles */
     }
 
     /* diminui um pouco as letras no celular */
@@ -217,7 +244,8 @@ body {
         font-size: 2.5rem;
     }
 
-    .coluna-direita h2, .projetos h2 {
+    .coluna-direita h2,
+    .projetos h2 {
         font-size: 2rem;
     }
 }
