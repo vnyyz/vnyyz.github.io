@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Portfólio - Vinícius Cunha</title>
+    <link rel="stylesheet" href="style.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <div class="coluna-esquerda">
+    
+    <div class="container-principal">
+        
+        <aside class="sidebar-perfil">
+            
+            <img src="euvinicisu.jpeg" alt="foto de perfil" id="foto-perfil">
+            
             <h1>Vinícius Cunha</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
-
-Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos..
-            </p>
+            
+            <h2 class="titulo-cargo">dev</h2>
             
             <div class="links-sociais">
                 <a href="https://github.com/vnyyz" target="_blank" title="GitHub">
@@ -30,35 +32,50 @@ Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapi
             </div>
             
             <a href="euvinicisu.jpeg" class="btn-cv" download>Download CV</a>
-        </div>
-        
-        <div class="coluna-direita">
-            <h2>dev</h2>
-            <img src="euvinicisu.jpeg" alt="foto de perfil" id="foto-perfil">
-        </div>
+
+        </aside>
+
+        <main class="conteudo-principal">
+
+            <section class="sobre-mim">
+                <h2>Sobre Mim</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos..
+                </p>
+            </section>
+
+            <section class="projetos">
+                <h2>Meus Projetos</h2>
+                <div class="projetos-container">
+                    
+                    <div class="projeto-card">
+                        <div>
+                            <h3>App de Zoológico</h3>
+                            <p>
+                                Descrição do segundo projeto. Ex: Uma simulação de zoológico usando conceitos de Herança e Polimorfismo em Java.
+                            </p>
+                        </div>
+                        <a href="https://github.com/ifpr-pgua-tads-oo2025/tarefa-03-10-vnyyz" target="_blank">Ver no GitHub</a>
+                    </div>
+
+                    <div class="projeto-card">
+                        <div>
+                            <h3>Portfólio Pessoal</h3>
+                            <p>
+                                O próprio site que você está vendo, construído com HTML5 e CSS3 puro, utilizando Flexbox para um layout moderno e responsivo.
+                            </p>
+                        </div>
+                        <a href="https://github.com/vnyyz/vnyyz.github.io" target="_blank">Ver no GitHub</a>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
     </div>
 
-    <section class="projetos">
-        <h2>Meus Projetos</h2>
-        <div class="projetos-container">
-            
-            <div class="projeto-card">
-                <h3>App de Zoológico</h3>
-                <p>
-                    Descrição do segundo projeto. Ex: Uma simulação de zoológico usando conceitos de Herança e Polimorfismo em Java.
-                </p>
-                <a href="https://github.com/ifpr-pgua-tads-oo2025/tarefa-03-10-vnyyz" target="_blank">Ver no GitHub</a>
-            </div>
-
-            <div class="projeto-card">
-                <h3>Portfólio Pessoal</h3>
-                <p>
-                    O próprio site que você está vendo, construído com HTML5 e CSS3 puro, utilizando Flexbox para um layout moderno e responsivo.
-                </p>
-                <a href="https://github.com/vnyyz/vnyyz.github.io" target="_blank">Ver no GitHub</a>
-            </div>
-
-        </div>
-    </section>
-    </body>
+</body>
 </html>

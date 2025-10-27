@@ -1,251 +1,203 @@
-/* configurações globais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+body, html {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #161616;
-    color: #f4f4f4;
+    background-color: #121212;
+    color: #E0E0E0;
+    min-height: 100%;
+}
+
+:root {
+    --cor-destaque: #8b0097;
+    --cor-lateral: #1E1E1E;
+    --cor-card: #2A2A2A;
+    --cor-texto: #E0E0E0;
+    --cor-texto-escuro: #121212;
+}
+
+.container-principal {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar-perfil {
+    width: 320px;
+    flex-shrink: 0;
+    background-color: var(--cor-lateral);
+    border-right: 1px solid #333;
+    padding: 2.5rem;
     display: flex;
     flex-direction: column;
-    /* alterado para permitir scroll */
-    justify-content: flex-start;
-    /* alinha ao topo */
     align-items: center;
-    min-height: 100vh;
-    padding: 2rem;
+    text-align: center;
 }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    /* faz as colunas quebrarem em telas menores */
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1100px;
-    width: 100%;
-    gap: 3em;
-    /*espaco nas colunas - */
+#foto-perfil {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid var(--cor-destaque);
+    object-fit: cover;
+    margin-bottom: 1.5rem;
 }
 
-/* coluna da esquerda (dostexto e links) */
-.coluna-esquerda {
-    flex: 1;
-    /* ocupa metade do espaço */
-    min-width: 300px;
-    /* lrgura minima antes de quebrar */
+.sidebar-perfil h1 {
+    font-size: 2.2rem;
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
 }
 
-.coluna-esquerda h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.coluna-esquerda p {
-    font-size: 1.1rem;
-    line-height: 1.6;
+.titulo-cargo {
+    font-size: 1.2rem;
+    color: var(--cor-destaque);
+    font-weight: bold;
+    letter-spacing: 1px;
     margin-bottom: 2rem;
-    max-width: 500px;
+    text-transform: uppercase;
 }
 
 .links-sociais {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .links-sociais a {
-    color: #f4f4f4;
-    font-size: 2.5rem;
-    /* tamanho dos icones */
-    margin-right: 20px;
+    color: var(--cor-texto);
+    font-size: 2rem;
+    margin: 0 0.75rem;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .links-sociais a:hover {
-    color: #8b0097;
-    /*corzinha quando vc passa o mouse em cima*/
+    color: var(--cor-destaque);
 }
 
 .btn-cv {
-    background-color: #8b0097;
-    /* azul do botão */
-    color: white;
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto-escuro);
     padding: 12px 25px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    border: 2px solid var(--cor-destaque);
 }
 
 .btn-cv:hover {
-    background-color: #d70b82;
+    background-color: transparent;
+    color: var(--cor-destaque);
 }
 
-/*imagem minha*/
-.coluna-direita {
-    flex: 1;
-    min-width: 300px;
-    text-align: center;
+.conteudo-principal {
+    flex-grow: 1;
+    padding: 3rem 4rem;
+    overflow-y: auto;
 }
 
-.coluna-direita h2 {
-    font-size: 2rem;
+.conteudo-principal h2 {
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    border-bottom: 3px solid var(--cor-destaque);
+    padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
 }
 
-.coluna-direita img {
-    max-width: 100%;
-    width: 954px;
-    height: 350px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 10px;
+.sobre-mim {
+    margin-bottom: 3rem;
 }
 
-
-/*sessao dos projetos*/
-.projetos {
-    max-width: 1100px;
-    /* msm largura do container principal*/
-    width: 100%;
-    margin: 4rem auto 2rem;
-    /* espaco em cima e embaixo */
-    text-align: center;
-    padding: 0 2rem;
-    /* faz que não cole nas bordas em telas pequenas */
+.sobre-mim p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
 }
 
-.projetos h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #f4f4f4;
-}
-
-/*css flexbox:fogo::fogo: */
 .projetos-container {
     display: flex;
-    flex-wrap: wrap;
-    /*faz ser responsivo */
-    justify-content: center;
+    flex-direction: column;
     gap: 1.5rem;
 }
 
-
 .projeto-card {
-    background-color: #3a3337;
+    background-color: var(--cor-card);
     border-radius: 8px;
-    width: 320px;
-    /* largura dos cards*/
-    text-align: left;
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.603);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 6px solid var(--cor-destaque);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .projeto-card:hover {
-    transform: translateY(-5px);
-    /* efeitinho legal ao passar o mouse */
-}
-
-.projeto-card img {
-    width: 100%;
-    height: 180px;
+    transform: translateX(10px);
+    background-color: #333;
 }
 
 .projeto-card h3 {
-    font-size: 1.5rem;
-    margin: 1rem 1.5rem 0.5rem;
-    color: #8b0097;
-    /* cor de destaque */
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
 }
 
 .projeto-card p {
-    font-size: 0.95rem;
+    font-size: 1rem;
     line-height: 1.5;
-    margin: 0 1.5rem 1rem;
-    /* espaco interno*/
+    opacity: 0.8;
+    max-width: 600px;
 }
 
 .projeto-card a {
     display: inline-block;
     background-color: transparent;
-    color: #f4f4f4;
-    padding: 8px 15px;
-    margin: 0 1.5rem 1.5rem;
-    /* espaco interno */
+    color: var(--cor-destaque);
+    padding: 10px 18px;
     text-decoration: none;
     font-weight: bold;
-    border: 1px solid #8b0097;
+    border: 2px solid var(--cor-destaque);
     border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    margin-left: 1.5rem;
 }
 
 .projeto-card a:hover {
-    background-color: #d70b82;
-    /*corzinha q fica qando vc passa o mouse em cima*/
-    color: white;
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto-escuro);
 }
 
-/* ---------------------------------- */
-/* para telas pequenas (celular) */
-/* ---------------------------------- */
-
-/* isso aqui só vai funcionar em telas de 768px pra baixo (tipo celular) */
-@media (max-width: 768px) {
-
-    body {
-        padding: 1.5rem;
-        /* menos espaço nas bordas da tela */
-        display: block;
-        /* ajeita o body pra página poder rolar normal */
-    }
-
-    /* joga a coluna da direita pra baixo da coluna da esquerda */
-    .container {
+@media (max-width: 900px) {
+    .container-principal {
         flex-direction: column;
-        gap: 1.5em;
-        /* diminui o espaço entre elas */
     }
 
-    /* deixa o texto da esquerda no meio */
-    .coluna-esquerda {
-        text-align: center;
-    }
-
-    /* deixa os ícones (github, etc) no meio */
-    .links-sociais {
-        text-align: center;
-        margin-bottom: 2.5rem;
-    }
-
-    .links-sociais a {
-        margin: 0 10px;
-        /* um espacinho entre os ícones */
-    }
-
-    .coluna-direita img {
+    .sidebar-perfil {
         width: 100%;
-        max-width: 400px;
-        /*faz a imagem nao ficarenorme*/
-        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #333;
     }
 
-    /* os cards de projeto também vão ficar um em cima do outro */
+    .conteudo-principal {
+        padding: 2rem;
+    }
+
     .projeto-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .projeto-card a {
+        margin-left: 0;
         width: 100%;
-        max-width: 350px;
-        /* um limite de largura pra eles */
+        text-align: center;
     }
 
-    /* diminui um pouco as letras no celular */
-    .coluna-esquerda h1 {
-        font-size: 2.5rem;
-    }
-
-    .coluna-direita h2,
-    .projetos h2 {
+    .conteudo-principal h2 {
         font-size: 2rem;
     }
 }
